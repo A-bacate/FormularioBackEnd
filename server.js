@@ -20,3 +20,27 @@ db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     email TEXT,
     senha TEXT
 )`)
+
+// Cadastrar usuário
+app.post("/usuarios", async (req, res)=>{
+
+    console.log(req.body);
+
+    let nome = req.body.nome;
+    let email = req.body.email;
+    let senha = req.body.senha;
+
+    let senhaHash = await bcrypt.hash(senha, 10);
+    console.log(senhaHas);
+
+    // Inserir no banco de dados
+    db.run(`INSERT INTO usuarios (nome, email, senha) 
+        VALUES (?, ?, ?)`
+        [nome, email, senhaHash],
+        res.json({
+            id: this.lastID,
+            nome,
+            email
+        })
+    )
+})
