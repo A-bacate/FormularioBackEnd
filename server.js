@@ -31,11 +31,11 @@ app.post("/usuarios", async (req, res)=>{
     let senha = req.body.senha;
 
     let senhaHash = await bcrypt.hash(senha, 10);
-    console.log(senhaHas);
+    console.log(senhaHash);
 
     // Inserir no banco de dados
     db.run(`INSERT INTO usuarios (nome, email, senha) 
-        VALUES (?, ?, ?)`
+        VALUES (?, ?, ?)`,
         [nome, email, senhaHash],
         res.json({
             id: this.lastID,
