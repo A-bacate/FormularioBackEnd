@@ -70,7 +70,7 @@ app.get("/usuarios/:id", (req, res) => {
 app.delete("/usuarios/:id", (req, res) => {
     let idUsuario = req.params.id;
 
-    db.get(`DELETE FROM usuarios WHERE id = ?`, 
+    db.run(`DELETE FROM usuarios WHERE id = ?`, 
     [idUsuario], function(){
         
         if(this.changes === 0){
