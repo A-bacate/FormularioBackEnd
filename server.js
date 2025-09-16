@@ -66,6 +66,25 @@ app.get("/usuarios/:id", (req, res) => {
     })
 })
 
+// Deletar usuário
+app.delete("/usuarios/:id", (req, res) => {
+    let idUsuario = req.params.id;
+
+    db.get(`DELETE FROM usuarios WHERE id = ?`, 
+    [idUsuario], (err, result) => {
+        if(result){
+            res.json({
+                "message" : "Usuário deletado!"
+            })
+        } else {
+            res.status(404).json({
+                "message" : "Usuário não encontrado!"
+            })
+        }
+    })
+})
+
+
 // Listar *todos* os usuários
 app.get("/usuarios", (req, res) => {
     db.all(`SELECT id, nome, email FROM usuarios`, [], (err, rows) => {
