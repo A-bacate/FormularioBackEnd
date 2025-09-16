@@ -55,9 +55,9 @@ app.get("/usuarios/:id", (req, res) => {
     let idUsuario = req.params.id;
 
     db.get(`SELECT id, nome, email FROM usuarios
-    WHERE id = ?`, [idUsuario], (err, row) => {
-        if(row){
-            res.json(row)
+    WHERE id = ?`, [idUsuario], (err, result) => {
+        if(result){
+            res.json(result)
         } else {
             res.status(404).json({
                 "message" : "Usuário não encontrado!"
