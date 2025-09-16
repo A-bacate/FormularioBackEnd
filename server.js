@@ -71,16 +71,16 @@ app.delete("/usuarios/:id", (req, res) => {
     let idUsuario = req.params.id;
 
     db.get(`DELETE FROM usuarios WHERE id = ?`, 
-    [idUsuario], (err, result) => {
-        if(result){
-            res.json({
-                "message" : "Usuário deletado!"
-            })
-        } else {
+    [idUsuario], function(){
+        
+        if(this.changes === 0){
             res.status(404).json({
-                "message" : "Usuário não encontrado!"
+                "message": "Usuário não encontrado!"
             })
         }
+        res.json({
+            "message": "Usuário deletado!"
+        })
     })
 })
 
