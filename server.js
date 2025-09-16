@@ -21,6 +21,11 @@ db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     senha TEXT
 )`)
 
+// // teste
+// app.get("/", (req, res) => {
+    
+// })
+
 // Cadastrar usuário
 app.post("/usuarios", async (req, res)=>{
 
@@ -45,7 +50,23 @@ app.post("/usuarios", async (req, res)=>{
     )
 })
 
-// Listar todos os usuários
+//Selecionar *um* usuário
+app.get("/usuarios/:id", (req, res) => {
+    let idUsuario = req.params.id;
+
+    db.get(`SELECT id, nome, email FROM usuarios
+    WHERE id = ?`, [idUsuario], (err, row) => {
+        if(row){
+            res.json(row)
+        } else {
+            res.status(404).json({
+                "message" : "Usuário não encontrado!"
+            })
+        }
+    })
+})
+
+// Listar *todos* os usuários
 app.get("/usuarios", (req, res) => {
     db.all(`SELECT id, nome, email FROM usuarios`, [], (err, rows) => {
         res.json(rows)
