@@ -1,3 +1,15 @@
+/*
+MÉTODOS HTTP
+
+-> GET
+-> POST
+-> PUT (todos os dados)
+-> PATCH (parciais)
+-> DELETE
+
+*/
+
+
 // Importar bibliotecas
 const express = require("express")
 const sqlite3 = require('sqlite3')
@@ -74,7 +86,6 @@ app.delete("/usuarios/:id", (req, res) => {
 
     db.run(`DELETE FROM usuarios WHERE id = ?`, 
     [idUsuario], function(){
-        
         if(this.changes === 0){
             res.status(404).json({
                 "message": "Usuário não encontrado!"
@@ -95,6 +106,19 @@ app.put("/usuarios/:id", async (req, res) => {
     let senha = req.body.senha
     
     let senhaHash = await bcrypt.hash(senha, 10)
+
+    db.run(`UPDATE usuarios SET nome = ?, email = ?, senha = ?
+    WHERE id = ?`, [nome, email, senhaHash, idUsuario],
+    function(){
+        if(this.changes === 0){
+            res.status(404).json({
+                "message": "Usuário não encontrado!"
+            })
+        }
+        res.json({
+            "message": "Usuário atualizado com sucesso!"
+        })
+    })
 })
 
 // Listar *todos* os usuários
