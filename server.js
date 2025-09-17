@@ -21,10 +21,12 @@ db.run(`CREATE TABLE IF NOT EXISTS usuarios (
     senha TEXT
 )`)
 
-// // teste
-// app.get("/", (req, res) => {
-    
-// })
+// "Rota raíz"
+app.get("/", (req, res) => {
+    res.json({
+        "teste": "ok"
+    })
+})
 
 // Cadastrar usuário
 app.post("/usuarios", async (req, res)=>{
@@ -84,6 +86,16 @@ app.delete("/usuarios/:id", (req, res) => {
     })
 })
 
+// Editar usuário
+app.put("/usuarios/:id", async (req, res) => {
+    let idUsuario = req.params.id
+    
+    let nome = req.body.nome
+    let email = req.body.email
+    let senha = req.body.senha
+    
+    let senhaHash = await bcrypt.hash(senha, 10)
+})
 
 // Listar *todos* os usuários
 app.get("/usuarios", (req, res) => {
