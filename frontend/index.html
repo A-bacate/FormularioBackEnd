@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script defer src="script.js"></script>
+    <title>Cadastro</title>
+</head>
+<body>
+    <div id="bloco">
+        <h2>Cadastro</h2>
+        <form>
+            <!-- <label for="nome">Nome: <input type="text" id="nome"></label>
+
+            <label for="email">Email: <input type="email" id="email"></label>
+
+            <label for="senha">Senha: <input type="password" id="senha"></label>
+
+            <label for="confirma-senha">Confirmar Senha: <input type="password" id="confirma-senha"></label>
+
+            <button type="button" class="btn-cadastrar" onclick="enviar()">Cadastrar</button> -->
+            <div>
+                <label for="nome" style="font-size: large;">Nome</label>
+                <input type="text" name="nome" id="nome" 
+                placeholder="Digite seu nome" required maxlength="50"
+                style="height: 35px; padding-left: 10px; font-size: medium;">
+            </div>
+            <br>
+
+            <!-- email -->
+            <div>
+                <label for="email" style="font-size: large;">E-mail</label>
+                <input type="email" name="email" id="email" 
+                placeholder="email@exemplo.com" required maxlength="30"
+                style="height: 35px; padding-left: 10px; font-size: medium;">
+            </div>
+            <br>
+
+            <!-- password -->
+            <div>
+                <label for="senha" style="font-size: large;">Senha</label>
+                <input type="password" name="senha" id="senha" 
+                placeholder="De 6 a 20 caracteres" required minlength="6" maxlength="20" 
+                style="height: 35px; padding-left: 10px; font-size: medium;">
+            </div>
+            <br>
+            <div>
+                <label for="confirma-senha" style="font-size: large;">Confirmar Senha</label>
+                <input type="password" name="confirma-senha" id="confirma-senha" 
+                placeholder="Confirme sua senha" required minlength="6" maxlength="20"
+                style="height: 35px; padding-left: 10px; font-size: medium;">
+            </div>
+            <br>
+            
+        </form>
+        <div>
+            <button type="button" class="btn-cadastrar" onclick="enviar()">Cadastrar</button>
+        </div>
+    </div>
+</body>
+</html>
