@@ -53,14 +53,15 @@ app.post("/usuarios", async (req, res)=>{
     console.log(senhaHash);
 
     // Inserir no banco de dados
-    db.run(`INSERT INTO usuarios (nome, email, senha) 
-        VALUES (?, ?, ?)`,
+    db.run(`INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)`,
         [nome, email, senhaHash],
-        res.json({
-            id: this.lastID,
-            nome,
-            email
-        })
+        function(){
+            res.json({
+                id: this.lastID,
+                nome,
+                email
+            })
+        }
     )
 })
 
