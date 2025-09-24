@@ -24,6 +24,7 @@ th{
 tbody{
     text-align: left;
     background-color: rgb(194, 206, 241);
+    font-size: medium;
 }
 #id{
     text-align: center;
