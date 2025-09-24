@@ -17,7 +17,10 @@ function carregar(){
                 <td id="id">${user.id}</td>
                 <td>${user.nome}</td>
                 <td>${user.email}</td>
-                <td></td>
+                <td>
+                    <button class="btn-excluir" onclick="excluir(${user.id})">Excluir</button>
+                    <button class="btn-editar" onclick="editar(${user.id})">Editar</button>
+                </td>
             `
 
             tbody.appendChild(tr)
