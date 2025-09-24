@@ -27,4 +27,13 @@ function carregar(){
         });
     })
 }
+
+function excluir(idUsuario){
+    fetch(`http://localhost:3000/usuarios/${idUsuario}`, {
+        'method': 'DELETE'
+    })
+    .then(() => carregar())
+}
+
+
 window.onload = carregar

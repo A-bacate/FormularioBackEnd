@@ -28,3 +28,19 @@ tbody{
 #id{
     text-align: center;
 }
+.btn-excluir{
+    font-size: medium;
+    background: rgb(187, 25, 25);
+    color: #ffffff;
+    margin: auto;
+    /* border: solid 2px rgb(48, 8, 8); */
+    cursor: pointer;
+}
+.btn-editar{
+    font-size: medium;
+    background: rgb(53, 53, 53);
+    color: #ffffff;
+    margin: auto;
+    /* border: solid 2px rgb(8, 48, 16); */
+    cursor: pointer;
+}
