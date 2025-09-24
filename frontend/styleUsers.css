@@ -8,17 +8,19 @@ body {
 table{
     padding: 10px;
     margin: auto;
+    border-radius: 2px;
+    background-color: rgb(85, 125, 236);
     
 }
 thead{
-    background-color: rgb(231, 150, 95);
-    
+    background-color: rgb(194, 206, 241);
 }
 th{
     padding: 20px;
     margin: auto;
+    border-radius: 5px;
+    border: solid 2px rgb(85, 125, 236);
 }
 /* #tabela{
-    border-radius: 10px;
-    border-color: rgb(192, 63, 23);
+
 } */
