@@ -35,5 +35,13 @@ function excluir(idUsuario){
     .then(() => carregar())
 }
 
+// function editar(idUsuario){
+//     fetch(`http://localhost:3000/usuarios/${idUsuario}`, {
+//         'method': 'PUT',
+        
+//     })
+//     .then(response => response.json())
+//     .then(() => carregar())
+// }
 
 window.onload = carregar
