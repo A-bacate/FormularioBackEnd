@@ -21,6 +21,10 @@ th{
     border-radius: 5px;
     border: solid 2px rgb(85, 125, 236);
 }
-/* #tabela{
-
-} */
+tbody{
+    text-align: left;
+    background-color: rgb(194, 206, 241);
+}
+#id{
+    text-align: center;
+}

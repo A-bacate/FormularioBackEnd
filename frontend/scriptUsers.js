@@ -12,13 +12,16 @@ function carregar(){
 
         // tristeza e dor e sofrimento
         data.forEach(user => {
-            const td = document.createElement('tr')
-            true.innerHTML = `
-                <td>${user.id}</td>
+            const tr = document.createElement('tr')
+            tr.innerHTML = `
+                <td id="id">${user.id}</td>
                 <td>${user.nome}</td>
                 <td>${user.email}</td>
                 <td></td>
             `
+
+            tbody.appendChild(tr)
         });
     })
 }
+window.onload = carregar
