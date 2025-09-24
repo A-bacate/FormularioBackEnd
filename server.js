@@ -7,8 +7,12 @@ MÉTODOS HTTP
 -> PATCH (parciais)
 -> DELETE
 
-*/
+Create
+Read
+Update
+Delete
 
+*/
 
 // Importar bibliotecas
 const express = require("express")

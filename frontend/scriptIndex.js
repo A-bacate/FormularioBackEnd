@@ -13,6 +13,7 @@ function enviar(){
         return;
     }
 
+    // REQUISIÇÃO  (req)
     fetch("http://localhost:3000/usuarios", {
         method: "POST",
         headers: {"Content-type": "application/json"},
