@@ -35,13 +35,35 @@ function excluir(idUsuario){
     .then(() => carregar())
 }
 
-// function editar(idUsuario){
-//     fetch(`http://localhost:3000/usuarios/${idUsuario}`, {
-//         'method': 'PUT',
-        
-//     })
-//     .then(response => response.json())
-//     .then(() => carregar())
-// }
+function editar(idUsuario){
+    let novoNome = prompt("Digite o novo nome: ")
+    let novoEmail = prompt("Digite o novo email: ")
+    let novaSenha = prompt("Digite a nova senha: ")
+
+    if(novoNome<1){
+        alert("Nome não pode estar vazio!")
+        return
+    }
+    if(novoEmail<1){
+        alert("Email não pode estar vazio!")
+        return
+    }
+    if(novaSenha<1){
+        alert("Senha não pode estar vazia!")
+        return
+    }
+    fetch(`http://localhost:3000/usuarios/${idUsuario}`, {
+        'method': 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        'body': JSON.stringify({
+            nome: novoNome,
+            email: novoEmail,
+            senha: novaSenha 
+        })   
+    })
+    .then(() => carregar())
+}
 
 window.onload = carregar
