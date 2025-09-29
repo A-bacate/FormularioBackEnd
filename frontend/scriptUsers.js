@@ -65,5 +65,8 @@ function editar(idUsuario){
     })
     .then(() => carregar())
 }
+function voltar(){
+    window.location.href = 'index.html'
+}
 
 window.onload = carregar
