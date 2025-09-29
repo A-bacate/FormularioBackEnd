@@ -42,6 +42,12 @@ tr:nth-child(even){
 button{
     border: solid 1px rgb(27, 27, 27);
 }
+.btn-voltar{
+    background: #919191;
+    width: auto;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+}
 .btn-excluir{
     font-size: medium;
     background: rgb(187, 25, 25);
