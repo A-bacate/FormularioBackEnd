@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     display: flex;
     justify-content: center;
@@ -6,49 +6,91 @@ body {
     flex-direction: column;
 }
 #bloco {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
     -webkit-box-shadow: 0px 0px 15px 3px #919191; 
     box-shadow: 0px 0px 15px 3px #919191;
-    padding: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
-    margin: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: auto;
 
     border-radius: 10px;
-    border: solid 3px #535353;
+    border: solid 3px rgb(85, 125, 236);
 
-    background-color: rgb(204, 204, 204);
+    background-color: rgb(194, 206, 241);
 }
 label {
     display:block;
-    /* margin-top: 10px; */
 }
 div {
     margin: 12px;
 }
-
-.btn-cadastrar {
-    font-family: 'Gill Sans MT';
-    font-size: large;
-    margin-top: 20px;
-    background: rgb(25, 187, 60);
-    color: #ffffff;
-    
-    border: solid 2px rgb(8, 48, 16);
-    cursor: pointer;
-    padding: 10px;
-    padding-left: 35px;
-    padding-right: 35px;
-    border-radius: 5px;
+ */
+body{
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
-.btn-cadastrar:hover {
+form{
+    -webkit-box-shadow: 0px 0px 15px 3px #919191; 
+    box-shadow: 0px 0px 15px 3px #919191;
+
+    max-width: 300px;
+    margin: auto;
+    padding: 20px;
+    border: solid 1px #a0a0a0;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+h2{
+    text-align: center;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 2px;
+    margin-top: 2px;
+    box-sizing: border-box;
+}
+
+button{
+    width: 50%;
+    padding: 5px;
+    margin-left: 75px;
+    margin-top: 10px;
+    font-size: medium;
+
+    color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #a0a0a0;
+    cursor: pointer;
+}
+.btn-lista{
+    background: #5580a8;
+}
+.btn-lista:hover{
+    background: #70a6da;
+    border: solid 1px #cecece;
+    background-position: right center;
+    transform: translateY(-2px);
+}
+.btn-lista:active {
+    transform: translateY(0);
+}   
+
+
+.btn-cadastrar{
+    background: #55a87d;
+}
+.btn-cadastrar:hover{
+    background: #65c593;
+    border: solid 1px #cecece;
     background-position: right center;
     transform: translateY(-2px);
 }
 .btn-cadastrar:active {
     transform: translateY(0);
 }
+
+/* https://www.joshwcomeau.com/css/center-a-div/ */

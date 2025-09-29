@@ -9,8 +9,8 @@
     <title>Cadastro</title>
 </head>
 <body>
+    <h2>Cadastro</h2>
     <div id="bloco">
-        <h2>Cadastro</h2>
         <form>
             <!-- <label for="nome">Nome: <input type="text" id="nome"></label>
 
@@ -27,7 +27,6 @@
                 placeholder="Digite seu nome" required maxlength="50"
                 style="height: 35px; padding-left: 10px; font-size: medium;">
             </div>
-            <br>
 
             <!-- email -->
             <div>
@@ -36,7 +35,6 @@
                 placeholder="email@exemplo.com" required maxlength="30"
                 style="height: 35px; padding-left: 10px; font-size: medium;">
             </div>
-            <br>
 
             <!-- password -->
             <div>
@@ -45,19 +43,17 @@
                 placeholder="De 6 a 20 caracteres" required minlength="6" maxlength="20" 
                 style="height: 35px; padding-left: 10px; font-size: medium;">
             </div>
-            <br>
             <div>
                 <label for="confirma-senha" style="font-size: large;">Confirmar Senha</label>
                 <input type="password" name="confirma-senha" id="confirma-senha" 
                 placeholder="Confirme sua senha" required minlength="6" maxlength="20"
                 style="height: 35px; padding-left: 10px; font-size: medium;">
-            </div>
-            <br>
+            </div> 
+                <button type="button" class="btn-cadastrar" onclick="enviar()">Cadastrar</button>
+                <button type="button" class="btn-lista" onclick="irParaLista()">Lista de Usuários</button>
+
             
         </form>
-        <div>
-            <button type="button" class="btn-cadastrar" onclick="enviar()">Cadastrar</button>
-        </div>
     </div>
 </body>
 </html>

@@ -32,3 +32,6 @@ function enviar(){
         window.location.href = "usuarios.html"
     })
 }
+function irParaLista(){
+    window.location.href = "usuarios.html"
+}
